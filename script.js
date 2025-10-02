@@ -30,31 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission handler
-    const demoForm = document.querySelector('.cta-form form');
-    
-    if (demoForm) {
-        demoForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: this.querySelector('input[type="text"]').value,
-                email: this.querySelector('input[type="email"]').value,
-                company: this.querySelectorAll('input[type="text"]')[1].value,
-                fleetType: this.querySelector('select').value
-            };
-            
-            console.log('Demo form submitted:', formData);
-            
-            // Here you would typically send the data to your backend
-            // For now, just show an alert
-            alert('Thank you for your interest! We will contact you shortly to schedule your demo.');
-            
-            // Reset form
-            this.reset();
-        });
-    }
+    // Form submission is now handled by FormSubmit.co
+    // The form will POST directly to https://formsubmit.co/mharvey@franmarine.com.au
 });
 
 // Add active state to navigation on scroll
